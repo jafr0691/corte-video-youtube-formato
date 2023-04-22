@@ -1,0 +1,534 @@
+<!DOCTYPE HTML>
+<html>
+<!-- Mirrored from ytcutter.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 Nov 2019 13:55:25 GMT -->
+<head>
+	<title>
+		Cut and Download Youtube Videos
+	</title>
+	<meta charset="utf-8"/>
+	<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport"/>
+	<link href="assets/css/all.ytcutter.css" rel="stylesheet"/>
+	<link href="assets/css/font-awesome.min.css" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic|Source+Code+Pro:400" rel="stylesheet"/>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-144249614-1">
+	</script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-144249614-1');
+	</script>
+</head>
+<body class="is-preload">
+	<!-- Header -->
+	<section id="header">
+		<div id="linkone">
+			<div id="singup">
+				<a href="#" id="login_link">
+					Login
+				</a>
+				|
+				<a href="#" id="register_link">
+					Register
+				</a>
+			</div>
+			<div id="account" style="display:none">
+				<span id="welcome">
+				</span>
+				<a href="#" id="account_link">
+					My Account
+				</a>
+				|
+				<a href="#" id="logout_link">
+					Logout
+				</a>
+			</div>
+		</div>
+		<div class="languages">
+			<a href="index.html">
+				<img src="assets/images/en_lang.gif"/>
+			</a>
+			<a href="de/index.html">
+				<img src="assets/images/de_lang.gif"/>
+			</a>
+			<a href="es/index.html">
+				<img src="assets/images/es_lang.gif"/>
+			</a>
+			<a href="fr/index.html">
+				<img src="assets/images/fr_lang.gif"/>
+			</a>
+			<a href="it/index.html">
+				<img src="assets/images/it_lang.gif"/>
+			</a>
+			<a href="pt/index.html">
+				<img src="assets/images/br_lang.gif"/>
+			</a>
+			<a href="ru/index.html">
+				<img src="assets/images/ru_lang.gif"/>
+			</a>
+		</div>
+		<nav id="nav">
+			<ul>
+				<li>
+					<a class="active" href="#one">
+						Home
+					</a>
+				</li>
+				<li>
+					<a href="#two">
+						Features
+					</a>
+				</li>
+				<li>
+					<a href="#three">
+						Help
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<footer>
+			<ul class="icons">
+				<li>
+					<a class="icon fa-twitter" href="https://twitter.com/home?status=https%3A//ytcutter.com">
+						<span class="label">
+							Twitter
+						</span>
+					</a>
+				</li>
+				<li>
+					<a class="icon fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//ytcutter.com">
+						<span class="label">
+							Facebook
+						</span>
+					</a>
+				</li>
+				<li>
+					<a class="icon fa-envelope" href="#contact">
+						<span class="label">
+							Email
+						</span>
+					</a>
+				</li>
+			</ul>
+		</footer>
+	</section>
+	<!-- Wrapper -->
+	<div id="wrapper">
+		<!-- Main -->
+		<div id="main">
+			<!-- One -->
+			<section id="one">
+				<div class="container">
+					<header class="major">
+						<h2 id="logo">
+							<a href="index.html">
+								YT Cutter
+								<img src="assets/images/ytcutter.png">
+							</img>
+						</a>
+					</h2>
+					<p>
+						Extract favorite scenes from YouTube videos
+					</p>
+				</header>
+				<form autocomplete="off" id="form1">
+					Paste youtube video URL
+					<span id="example">
+						(try our
+						<a href="#">
+							test example
+						</a>
+						↓)
+					</span>
+					<div>
+						<input id="url" name="url" placeholder="https://www.youtube.com/watch?v=..." style="width:70%; float: left; margin-right: 10px;" type="text">
+						<input id="submit" style="width:20%" type="submit" value="Start">
+					</input>
+				</input>
+			</div>
+		</form>
+		<form autocomplete="off" id="form2" onsubmit="return false">
+			<div id="editor" style="display:none">
+				<div id="controls">
+					<div id="timeControls">
+						<div>
+							<label for="currentTime">
+								current time:
+							</label>
+						</div>
+						<div>
+							<input class="button primary" disabled="disabled" id="backButton" type="button" value="<">
+							<input id="currentTime" type="text">
+							<input class="button primary" disabled="disabled" id="forwardButton" type="button" value=">">
+						</input>
+					</input>
+				</input>
+			</div>
+			<div>
+				<button class="button primary" disabled="disabled" id="startButton" title="set start time" type="button">
+					start
+				</button>
+				<button class="button primary" disabled="disabled" id="endButton" title="set end time" type="button">
+					end
+				</button>
+			</div>
+		</div>
+		<div id="durationControls">
+			<div>
+				<label id="gotoStartTime">
+					start:
+				</label>
+				<input id="startTime" placeholder="not set" type="text">
+			</input>
+		</div>
+		<div>
+			<label id="gotoEndTime">
+				end:
+			</label>
+			<input id="endTime" placeholder="not set" type="text">
+		</input>
+	</div>
+	<div>
+		<label for="duration">
+			duration:
+		</label>
+		<span id="duration">
+		</span>
+	</div>
+</div>
+<div id="actionControls">
+	<div>
+		<button class="button primary" disabled="disabled" id="previewButton" type="button">
+			preview
+		</button>
+	</div>
+	<div>
+		<div id="downloadDropdown">
+			<button class="button primary" disabled="disabled" id="downloadButton" type="button">
+				<span>
+					download
+				</span>
+				<span class="caret">
+					▼
+				</span>
+			</button>
+			<ul style="display:none">
+				<li>
+					<a href="#" id="mp4">
+						video file
+					</a>
+				</li>
+				<li>
+					<a href="mp3" id="mp3">
+						audio file
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</div>
+<div id="player">
+</div>
+</div>
+</form>
+<div id="progr" style="background-color:#f3f3f3; height:20px; padding:0;border-radius: 3px; display: none;">
+	<div class="upload-progress">
+		<div class="progress-bar blue stripes shine">
+			<span class="progress-text">
+			</span>
+		</div>
+	</div>
+</div>
+<div id="urldescarga" style="display: none;">
+	<i class="icon-archive" style="color: #8dc63f">
+	</i>
+	<h3 id="tides">
+		Tu video de youtube se a descargado exitosamente.
+	</h3>
+	<button type="button">
+		<a download="" href="" id="carpzip">
+			Descargar
+		</a>
+	</button>
+</div>
+<div id="resultt">
+	<h3 class="modal">
+		<span id="perc">
+		</span>
+		<img src="assets/images/loading.gif">
+	</img>
+</h3>
+While the file is being processed please have a look at the ads:
+<div id="rn_ad_native_pskyw">
+</div>
+</div>
+<div id="errors">
+	<h4>
+		Error summary
+	</h4>
+	<ul>
+	</ul>
+</div>
+</div>
+</section>
+</div>
+</div>
+</body>
+</html>
+<!-- Two -->
+<section id="two">
+	<div class="container">
+		<h3>
+			Features
+		</h3>
+		<p>
+		</p>
+		<ul class="feature-icons">
+			<li class="fa-code">
+				Trim and download Youtube movies online
+			</li>
+			<li class="fa-book">
+				Save cropped parts to your computer
+			</li>
+			<li class="fa-code">
+				Export to video, audio or animated GIF
+			</li>
+			<li class="fa-users">
+				Take screenshots of YouTube videos
+			</li>
+			<li class="fa-cubes">
+				High cropping precision (0.1 sec)
+			</li>
+			<li class="fa-bolt">
+				Works online, no registration needed
+			</li>
+		</ul>
+	</div>
+</section>
+<!-- Three -->
+<section id="three">
+	<div class="container">
+		<h3>
+			Frequently Asked Questions
+		</h3>
+		<div class="features">
+			<article>
+				<div class="inner">
+					<h4>
+						How to set the quality of the clip?
+					</h4>
+					<p>
+						Just set the desired video quality in YouTube player. The clip that you download will have the same quality.
+					</p>
+				</div>
+			</article>
+			<article>
+				<div class="inner">
+					<h4>
+						What is the maximum clip length?
+					</h4>
+					<p>
+						For video clips it's 10 minutes, for audio files it's 1 hour and for GIFs it's 10 seconds.
+					</p>
+				</div>
+			</article>
+			<article>
+				<div class="inner">
+					<h4>
+						How to take a screenshot of YOUTUBE movie?
+					</h4>
+					<p>
+						Set the "start time" to the frame that you want to capture. The end time is ignored, so set it to any value that will enable the download.
+					</p>
+				</div>
+			</article>
+			<article>
+				<div class="inner">
+					<h4>
+						What file types do you generate?
+					</h4>
+					<p>
+						We try to generate mp4 files for videos and m4a for audio. If for a given input it's not possible you may get some
+						<a href="https://en.wikipedia.org/wiki/Matroska">
+							Matroska
+						</a>
+						(mkv, mka) or
+						<a href="https://en.wikipedia.org/wiki/Vorbis">
+							Vorbis
+						</a>
+						(ogg) files. Have a look
+						<a href="https://en.wikipedia.org/w/index.php?search=Comparison+of+player+software">
+							here
+						</a>
+						to find players for these file types.
+					</p>
+				</div>
+			</article>
+			<article>
+				<div class="inner">
+					<h4>
+						How to download a full album from YouTube and split it into songs?
+					</h4>
+					<p>
+						Use our sister site
+						<a href="https://ytalbums.com/">
+							YTalbums.com
+						</a>
+						, which does just that. You can specify a tracklist so that each song has the right name and then you can download all the songs in a ZIP archive.
+					</p>
+				</div>
+			</article>
+		</div>
+	</div>
+</section>
+<div id="contact">
+	<h3>
+		Contact us
+	</h3>
+	<a name="contact">
+	</a>
+	<form action="https://ytcutter.com/contact-nojs.php" method="post" onsubmit="return contactSubmit(this)">
+		<div>
+			<label for="email">
+				Your email
+			</label>
+			<input id="email" name="email" required="required" type="email">
+		</input>
+	</div>
+	<div>
+		<label for="msg">
+			Your message
+		</label>
+		<textarea id="msg" name="msg" required="required" rows="5">
+		</textarea>
+	</div>
+	<input type="submit">
+</input>
+</form>
+<div id="sent">
+</div>
+</div>
+<!-- Footer -->
+<section id="footer">
+	<div class="container">
+		<ul class="copyright">
+			Credits:
+			<li>
+				Design:
+				<a href="http://html5up.net/">
+					HTML5 UP
+				</a>
+			</li>
+			<li>
+				©
+				<a href="http://www.stockunlimited.com/">
+					Image by StockUnlimited
+				</a>
+			</li>
+			<li>
+				<a href="https://ytdl-org.github.io/youtube-dl/">
+					youtube-dl
+				</a>
+			</li>
+			<li>
+				<a href="https://ffmpeg.org/">
+					FFmpeg
+				</a>
+			</li>
+		</ul>
+	</div>
+</section>
+<script src="https://www.youtube.com/iframe_api">
+</script>
+<script src="assets/js/all.ytcutter.js">
+</script>
+<script src="assets/js/messages.en.js">
+</script>
+<!-- <script src="../cdn.runative-syndicate.com/sdk/v1/n.js"></script> -->
+<script type="text/javascript">
+	(function($, window, undefined) {
+    //is onprogress supported by browser?
+    var hasOnProgress = ("onprogress" in $.ajaxSettings.xhr());
+
+    //If not supported, do nothing
+    if (!hasOnProgress) {
+    	return;
+    }
+
+    //patch ajax settings to call a progress callback
+    var oldXHR = $.ajaxSettings.xhr;
+    $.ajaxSettings.xhr = function() {
+    	var xhr = oldXHR.apply(this, arguments);
+    	if(xhr instanceof window.XMLHttpRequest) {
+    		xhr.addEventListener('progress', this.progress, false);
+    	}
+
+    	if(xhr.upload) {
+    		xhr.upload.addEventListener('progress', this.progress, false);
+    	}
+
+    	return xhr;
+    };
+})(jQuery, window);
+
+function round(t, e) {
+	e || (e = 0);
+	var n = Math.round(t * Math.pow(10, e)) / Math.pow(10, e);
+	return n
+}
+			//document.getElementById
+			document.getElementById("downloadDropdown").addEventListener("click",function(ev){
+				ev.preventDefault();
+				console.log(ev.target.id);
+				if(ev.target.id == "mp4" || ev.target.id == "mp3"){
+					$('#downloadDropdown ul').hide();
+					player.pauseVideo();
+					var formato = ev.target.id;
+					document.getElementById("tides").innerHTML ="Tu "+ev.target.id+" de youtube se a descargado exitosamente.";
+					var url = document.getElementById("url").value;
+					var startTime = document.getElementById("startTime").value;
+					var endTime = document.getElementById("endTime").value;
+					console.log(url);
+					$.ajax({
+						url: "youtubedescarga.php",
+						type: "post",
+						dataType: "json",
+						data: {"url":url,"startTime":startTime,"endTime":endTime,"formato":formato},
+						progress: function (evt) {
+							if(evt.lengthComputable){
+								console.log(evt);
+								var percents = parseInt(evt.loaded / evt.total * 100, 10);
+								var mb_s = evt.loaded / 1024 / 1024 / 8;
+
+								$(".progress-bar").css('width', percents + '%');
+								$(".progress-text").text(round(mb_s, 2) +  ' MB/s - ' + percents + '%');
+							}
+						},
+						progressall: function (data) {
+							if(data.lengthComputable){
+								console.log(data);
+								var progress = parseInt(data.loaded / data.total * 100, 10);
+								$('.progress-bar').css('width', progress + '%');
+							}
+						},
+						beforeSend: function(){
+							document.getElementById("urldescarga").style.display = "none";
+							var xx = document.getElementById("progr");
+							xx.style.display = "block";
+						},
+						success: function(res){
+							console.log("aqui url jesus: "+res.url);
+							var xxx = document.getElementById("urldescarga");
+							xxx.style.display= "block";
+							var xx = document.getElementById("progr");
+							xx.style.display = "none";
+							document.getElementById("carpzip").setAttribute("href",res.url);
+						}
+
+					});
+				}
+			});
+		</script>
+		<!-- Mirrored from ytcutter.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 Nov 2019 13:55:35 GMT -->

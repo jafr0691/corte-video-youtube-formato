@@ -1,0 +1,272 @@
+<!DOCTYPE HTML>
+<html>
+	
+<!-- Mirrored from ytcutter.com/pt/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 Nov 2019 13:55:48 GMT -->
+<head>
+		<title>Corte e baixar vídeos do YouTube</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+		<link rel="stylesheet" href="../assets/css/all.ytcutter.css" />
+		<link rel="stylesheet" href="../assets/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic|Source+Code+Pro:400" />
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-144249614-1"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-144249614-1');
+		</script>
+</head>
+	<body class="is-preload">
+
+    	<!-- Header -->
+			<section id="header">
+				
+				<div id="linkone">
+					<div id="singup">
+						<a href="#" id="login_link">Login</a> | 
+						<a href="#" id="register_link">Register</a>
+					</div>
+					<div id="account" style="display:none">
+						<span id="welcome"></span>
+						<a href="#" id="account_link">My Account</a> |
+						<a href="#" id="logout_link">Logout</a>
+					</div>
+				</div>
+				<div class="languages">
+					<a href="../index.html"><img src="../assets/images/en_lang.gif"></a>
+					<a href="../de/index.html"><img src="../assets/images/de_lang.gif"></a>
+					<a href="../es/index.html"><img src="../assets/images/es_lang.gif"></a>
+					<a href="../fr/index.html"><img src="../assets/images/fr_lang.gif"></a>
+					<a href="../it/index.html"><img src="../assets/images/it_lang.gif"></a>
+					<a href="index.html"><img src="../assets/images/br_lang.gif"></a>
+					<a href="../ru/index.html"><img src="../assets/images/ru_lang.gif"></a>
+				</div>
+				<nav id="nav">
+					<ul>
+						<li><a href="#one" class="active">Casa</a></li>
+						<li><a href="#two">Recursos</a></li>
+						<li><a href="#three">Socorro</a></li>
+					</ul>
+				</nav>
+				<footer>
+					<ul class="icons">
+						<li><a href="https://twitter.com/home?status=https%3A//ytcutter.com" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//ytcutter.com" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#contact" class="icon fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+				</footer>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<!-- One -->
+							<section id="one">
+								<div class="container">
+									<header class="major">
+										<h2 id="logo">
+											<a href="../index.html">YT Cutter
+											<img src="../assets/images/ytcutter.png">
+											</a>
+										</h2>
+										<p>
+											Extrair cenas favoritas de vídeos do YouTube										</p>
+									</header>
+										
+										<form id="form1" autocomplete="off">
+											Colar youtube URL do vídeo <span id="example">(experimentar os nossos exemplo <a teste href='#'> </a> &darr;)</span>
+											<div>
+												<input id="url" name="url" type="text" style="width:70%; float: left; margin-right: 10px;" placeholder="https://www.youtube.com/watch?v=...">
+												<input id="submit" type="submit" style="width:20%" value="Começar">
+											</div>
+										</form>
+
+										<form id="form2" autocomplete="off" onsubmit="return false">
+											<div id="editor" style="display:none">
+												<div id="controls">
+
+													<div id="timeControls">
+														<div>
+															<label for="currentTime">hora atual:</label>
+														</div>
+														<div>
+															<input type="button" id="backButton" class="button primary" value="&lt;" disabled="disabled">
+															<input id="currentTime" type="text">
+															<input type="button" id="forwardButton" class="button primary" value="&gt;" disabled="disabled">
+														</div>
+														<div>
+															<button id="startButton" type="button" class="button primary" disabled="disabled" title="Definir hora de início">começar</button>
+															<button id="endButton" type="button" class="button primary" disabled="disabled" title="definir tempo extremidade">fim</button>
+														</div>
+													</div>
+
+													<div id="durationControls">
+														<div>
+															<label id="gotoStartTime">começar:</label>
+															<input id="startTime" type="text" placeholder="não configurado">
+														</div>
+														<div>
+															<label id="gotoEndTime">fim:</label>
+															<input id="endTime" type="text" placeholder="não configurado">
+														</div>
+														<div>
+															<label for="duration">duração:</label>
+															<span id="duration"></span>
+														</div>
+													</div>
+
+													<div id="actionControls">
+														<div>
+															<button id="previewButton" type="button" class="button primary" disabled="disabled">visualização</button>
+														</div>
+														<div>
+
+														<div id="downloadDropdown" >
+															<button id="downloadButton" type="button" class="button primary" disabled="disabled">
+																<span>baixar</span>
+																<span class="caret">&#9660;</span>
+															</button>
+															<ul style="display:none">
+																<li><a href="#" value="video">arquivo de vídeo</a></li>
+																<li><a href="#" value="gif">animação gif</a></li>
+																<li><a href="#" value="audio">arquivo de áudio</a></li>
+																<li><a href="#" value="screenshot">Screenshot</a></li>
+															</ul>
+														</div>
+
+														</div>
+													</div>
+												</div>
+														
+												<div id="player"></div>
+											</div>
+										</form>
+
+										<div id="result">
+											<h3 class='modal'>
+												<span id="perc"></span>
+												&nbsp;
+												<img src="../assets/images/loading.gif"> 
+											</h3>
+											While the file is being processed please have a look at the ads:											<div id="rn_ad_native_pskyw"></div>
+										</div>
+
+										<div id="errors">
+											<h4>resumo de erros</h4>
+											<ul></ul>
+										</div>
+
+
+
+
+									</p>
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two">
+								<div class="container">
+									<h3>Recursos</h3>
+									<p>
+									</p>
+									<ul class="feature-icons">
+										<li class="fa-code">Aparar e download de filmes Youtube em linha</li>
+										<li class="fa-book">Salvar cortadas peças para o seu computador</li>
+										<li class="fa-code">Exportar para vídeo, áudio ou GIF animado</li>
+										<li class="fa-users">Tirar screenshots de vídeos do YouTube</li>
+										<li class="fa-cubes">precisão alta recorte (0,1 seg)</li>
+										<li class="fa-bolt">Funciona online, sem registo necessário</li>
+									</ul>
+								</div>
+							</section>
+
+						<!-- Three -->
+							<section id="three">
+								<div class="container">
+									<h3>perguntas frequentes</h3>
+									<div class="features">
+										<article>
+											<div class="inner">
+												<h4>Como definir a qualidade do clip?</h4>
+												<p>Basta definir a qualidade do vídeo desejado no player do YouTube. O clipe que você baixar terá a mesma qualidade.</p>
+											</div>
+										</article>
+										<article>
+											<div class="inner">
+												<h4>Qual é a duração máxima do filme?</h4>
+												<p>Para clipes de vídeo é de 10 minutos, para arquivos de áudio é de 1 hora e para GIFs é 10 segundos.</p>
+											</div>
+										</article>
+										<article>
+											<div class="inner">
+												<h4>Como tomar um screenshot do filme YOUTUBE?</h4>
+												<p>Defina o "tempo de start" para o quadro que você deseja capturar. O tempo final é ignorado, então configurá-lo para qualquer valor que permitirá o download.</p>
+											</div>
+										</article>
+										<article>
+											<div class="inner">
+												<h4>Quais tipos de arquivos você gerar?</h4>
+												<p>Tentamos gerar arquivos MP4 para vídeos e m4a para áudio. Se para uma determinada entrada não é possível que você pode obter algum <a href='https://en.wikipedia.org/wiki/Matroska'> Matroska </a> (MKV, MKA) ou <https um href = ': //en.wikipedia.org/wiki/Vorbis'>Vorbis </a> arquivos (OGG). Tenha um <a olhar href='https://en.wikipedia.org/w/index.php?search=Comparison+of+player+software'> aqui </a> para encontrar jogadores para esses tipos de arquivo.</p>
+											</div>
+										</article>
+										<article>
+											<div class="inner">
+												<h4>Como baixar um álbum completo do YouTube e dividi-lo em músicas?</h4>
+												<p>Use nosso site <a irmã href='https://ytalbums.com/'> YTalbums.com </a>, que faz exatamente isso. Você pode especificar um tracklist de modo que cada música tem o nome certo e, em seguida, você pode baixar todas as músicas em um arquivo ZIP.</p>
+											</div>
+										</article>
+										
+									</div>
+								</div>
+							</section>
+					</div>
+
+
+					<div id="contact">
+						<h3>Contate-Nos</h3>
+						<a name="contact"></a>
+						<form method="post" action="https://ytcutter.com/contact-nojs.php" onsubmit="return contactSubmit(this)">
+							<div>
+								<label for="email">Seu email</label>
+								<input name="email" id="email" type="email" required="required">
+							</div>
+							<div>
+								<label for="msg">Sua mensagem</label>
+								<textarea name="msg" id="msg" rows="5" required="required"></textarea>
+							</div>
+							<input type="submit">
+						</form>
+						<div id="sent"></div>
+					</div>
+
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="container">
+							<ul class="copyright">
+								créditos:								<li>Design: <a href="http://html5up.net/">HTML5 UP</a></li>
+								<li>&copy; <a href='http://www.stockunlimited.com/'>Image by StockUnlimited</a></li>
+								<li><a href="https://ytdl-org.github.io/youtube-dl/">youtube-dl</a></li>
+								<li><a href="https://ffmpeg.org/">FFmpeg</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+
+			
+		<script src="https://www.youtube.com/iframe_api"></script>
+		<script src="../assets/js/all.ytcutter.js"></script>
+		<script src="../assets/js/messages.pt.js"></script>
+		<script src="../../cdn.runative-syndicate.com/sdk/v1/n.js"></script>
+	</body>
+
+<!-- Mirrored from ytcutter.com/pt/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 Nov 2019 13:55:49 GMT -->
+</html>
